@@ -73,6 +73,10 @@ img{
 /*Reset code and common code ends here */
 
 /* header starts here */
+#menu-icon-bar{
+    display: none;
+}
+
 header{
     display: flex;
     justify-content: space-between;
@@ -85,6 +89,8 @@ header{
     z-index: 10;
     min-height: 5vh;
 }
+
+
 
 .logo-figure{
     border: 1px solid #fff;
@@ -433,6 +439,14 @@ textarea{
 }
 
 @media screen and (max-width: 600px) {
+    #menu-icon-bar{
+        display: block;
+        margin: 2rem 0;
+    }
+
+    .hidden{
+        display: none;
+    }
     html{
         font-size:48.5%;
         
