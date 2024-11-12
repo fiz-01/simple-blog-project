@@ -2,6 +2,8 @@
 :root{
     --transition: all 0.3s;
     --scale: scale(1.1);
+    --box-shadow: box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem
+    #c4c4c4;
 }
 *{
 box-sizing: border-box;
@@ -24,7 +26,7 @@ body{
     width: 100rem;
     max-width: 100%;
     margin: auto;
-    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem #c4c4c4;
+    box-shadow: var(--box-shadow);
 }
 
 .text-justify{
@@ -235,8 +237,7 @@ nav ul li:hover{
     width: 70%;
     display: flex;
     margin: 1rem 0;
-    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem
-     #c4c4c4;
+    box-shadow: var(--box-shadow);
      transition: var(--transition);
 }
 .blog-post:hover{
@@ -277,6 +278,58 @@ nav ul li:hover{
     width: 30%;
 }
 /* Blog posts section ends here  */
+
+/* Contact Section starts ends here  */
+form{
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    color: #fff;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+#contact-section{
+    background-color: #4c4c4c;
+    min-height: 95vh;
+
+}
+
+.form-control{
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.form-control label{
+    font-size: 1.6rem;
+    flex: 0.3;
+}
+
+.form-control> input,textarea{
+    flex: 0.7;
+    width:40rem ;
+    padding: 2rem 1rem;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+textarea{
+    resize: none;
+    height: 12vh;
+}
+
+.form-btn-field{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact__btn{
+    width: 30%;
+}
+/* Contact Section ends here  */
 
 
 
@@ -322,6 +375,21 @@ nav ul li:hover{
         width: 80%;
         flex-direction: column;
      }
+
+     #contact-section{
+        background-color: #4c4c4c;
+        min-height: auto;
+        padding-top: 3rem;
+    
+    }
+
+    .form-control{
+        flex-direction: column;
+    }
+
+    .form-control> input,textarea{
+       margin-bottom: 0.5rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
