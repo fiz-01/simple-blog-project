@@ -1,4 +1,8 @@
 /* Reset code and common code starts here */
+:root{
+    --transition: all 0.3s;
+    --scale: scale(1.1);
+}
 *{
 box-sizing: border-box;
 margin: 0;
@@ -40,6 +44,7 @@ body{
     padding: 1rem 0;
     box-shadow: 0.1rem 0.1rem 0.1rem #222;
     letter-spacing: 0.1rem;
+    text-transform: uppercase;
 }
 
 .section-heading{
@@ -47,7 +52,6 @@ body{
     text-align: center;
     font-family: "Italianno", cursive;
     font-weight: 400;
-    color: white;
 }
 
 .section-center{
@@ -57,6 +61,12 @@ body{
     align-items: center;
     min-height: 95vh;
 
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 /*Reset code and common code ends here */
 
@@ -89,7 +99,7 @@ nav ul{
 
 nav ul li{
     padding: 1rem;
-    transition: 0.4s;
+    transition: var(--transition);
 }
 
 nav ul li:hover{
@@ -163,11 +173,11 @@ nav ul li:hover{
     padding: 3rem 1rem;
     margin: 2rem;
     gap: 0.6rem;
-    transition: 0.3s;
+    transition: var(--transition);
 }
 
 .card:hover{
-    transform: scale(1.1);
+    transform: var(--scale);
 }
 
 .card__header{
@@ -183,6 +193,91 @@ nav ul li:hover{
     width: 80%;
 }
 /* About me section ends here  */
+
+/* Archives section starts here  */
+.archives-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+    border-top: 0.1rem solid;
+    border-bottom: 0.1rem solid;
+
+}
+
+.archives__lists{
+    display: flex;
+    gap: 2rem;
+}
+
+.archives__list{
+
+}
+
+.archives__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.6rem;
+    transition: var(--transition);
+    
+}
+.archives__img:hover{
+  transform:var(--scale);
+    
+}
+/* Archives section ends here  */
+
+/* Blog posts section starts here  */
+.blog-posts{
+    gap: 2rem;
+ }
+.blog-post{
+    width: 70%;
+    display: flex;
+    margin: 1rem 0;
+    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -0.1rem 0rem 0.1rem
+     #c4c4c4;
+     transition: var(--transition);
+}
+.blog-post:hover{
+  transform: var(--scale);
+}
+.blog-post__heading{
+    margin-bottom: 5rem;
+}
+
+.blog-post__aside{
+    flex: 1;
+}
+
+.blog-post__content{
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 1rem;
+    margin-left: 2rem;
+    gap: 1rem;
+}
+
+.blog-post__heading{
+    font-size: 2.5rem;
+}
+
+.blog-post__sub-heading{
+    font-size: 2rem;
+}
+
+.blog-post__description{
+    font-size: 1.6rem;
+    text-align: justify;
+}
+
+.blog-post__btn{
+    width: 30%;
+}
+/* Blog posts section ends here  */
+
 
 
 /* Responsiveness starts here */
@@ -217,6 +312,15 @@ nav ul li:hover{
      .cards{
         flex-direction: column;
         width: 80%;
+     }
+
+     #archives{
+        min-height: auto;
+     }
+    
+     .blog-post{
+        width: 80%;
+        flex-direction: column;
      }
 }
 
@@ -257,6 +361,16 @@ nav ul li:hover{
     }
     .cards{
         width: 90%;
+     }
+     .archives__lists{
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 90%;
+     }
+
+     .blog-post{
+        width: 90%;
+     
      }
 }
 /* Responsiveness ends here */
