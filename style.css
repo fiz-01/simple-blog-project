@@ -331,6 +331,46 @@ textarea{
 }
 /* Contact Section ends here  */
 
+/* Footer Section starts here  */
+.footer{
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    min-height: 5vh;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 1rem;
+}
+
+.copy-right__text{
+    font-size: 1.2rem;
+}
+
+.footer__links{
+    display: flex;
+    gap: 1.5rem;
+
+}
+.footer__link{
+    color: white;
+    transition: var(--transition);
+}
+.footer__link:hover{
+    color: orange;
+    transform: scale(1.5);
+}
+
+.footer__icon{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+
+
+
+/* Footer Section ends here  */
+
 
 
 /* Responsiveness starts here */
@@ -439,6 +479,9 @@ textarea{
      .blog-post{
         width: 90%;
      
+     }
+     .footer{
+        flex-direction: column;
      }
 }
 /* Responsiveness ends here */
